@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+        
+{% block content %}
+
+<div class="row center-align">
+  <div class="col s6 offset-s3">
+    <div class="card">
+
+    <form method="post" enctype="multipart/form-data" action="" role="form">
+      {% csrf_token %}
+    <h3 class="title is-3">Редактирование /профиля</h3>
+
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>Фото</span>
+              {{ form.picture }}
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
+
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>Баннер</span>
+              {{ form.banner }}
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
+
+          <div class="input-field col s12">
+            {{ form.first_name }}
+            <label for="first_name">Имя</label>
+          </div>
+
+          <div class="input-field col s12">
+            {{ form.last_name }}
+            <label for="last_name">Фамилия</label>
+          </div>
+
+          <div class="input-field col s12">
+            {{ form.location }}
+            <label for="location">Локация</label>
+          </div>
+
+          <div class="input-field col s12">
+            {{ form.url }}
+            <label for="url">Ссылка</label>
+          </div>
+
+          <div class="input-field col s12">
+            {{ form.profile_info }}
+            <label for="profile_info">Биография</label>
+          </div>
+
+      <div class="row">
+        <div class="col s12">
+          <span style="color: red; font-weight: bold;">{{ form.errors }}</span>
+        </div>
+      </div>
+
+
+      <div class="field">
+      <p class="control">
+        <button type="submit" value="login" class="btn waves-effect waves-light">
+          Update
+        </button>
+      </p>
+    </div>
+
+    </form>
+  </div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'temp/snipest/base.html' %}
+{% load static %}
+
+{% block css %}
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    {% block csss %}
+        {% endblock csss %}
+{% endblock css %}
+
+
+{% block contentbase %}
+
+
+
+
+    {% block banner %}
+    {% endblock %}
+
+
+
+<div class="container">
+  <div class="section">
+
+    {% block content %}
+    {% endblock %}
+  </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+{% endblock contentbase %}
+
+{% block js %}
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{% static 'js/materialize.js' %}"></script>
+  <script src="{% static 'js/init.js' %}"></script>
+  <script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+  <script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+
+  {% block javascript %}
+  {% endblock %}
+{% endblock js %}
