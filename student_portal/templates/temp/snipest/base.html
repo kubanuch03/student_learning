@@ -77,11 +77,11 @@
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="/" class="nav-item nav-link active">Home</a>
-                        <a href="{% url 'shopping_cart:allcourse' %}" class="nav-item nav-link">Lecture</a>
-                        <a href="{% url 'team' %}" class="nav-item nav-link">Teacher</a>
-                        <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
-                        <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
+                        <a href="/" class="nav-item nav-link active">Главная</a>
+                        <a href="{% url 'shopping_cart:allcourse' %}" class="nav-item nav-link">Лекции</a>
+                        <a href="{% url 'team' %}" class="nav-item nav-link">Учителя</a>
+                        <a href="{% url 'about' %}" class="nav-item nav-link">О нас</a>
+                        <a href="{% url 'contact' %}" class="nav-item nav-link">Контакты</a>
                         {% if user.is_authenticated %}
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ user.username }}</a>
